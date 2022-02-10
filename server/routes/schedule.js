@@ -7,7 +7,7 @@ const router = express.Router()
 router.get('/', (req, res) => {
   db.getSchedule()
     .then(results => {
-      res.json({ schedule: results.map(schedule => schedule.name) })
+      res.json({ schedule: results })
       return null
     })
     .catch(err => {

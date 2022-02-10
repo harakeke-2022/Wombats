@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { fetchSchedule } from '../actions'
+import Schedule from './Schedule'
 
 function App () {
   const scheduleList = useSelector(state => state.schedule)
@@ -15,8 +16,9 @@ function App () {
       <div className='app'>
         <h1>Wombats FTW!</h1>
         <ul>
-          {scheduleList.map(schedule => (
-            <li key={schedule}>{schedule}</li>
+          {scheduleList.map(song => (
+
+            <Schedule key={song.id} song={song}> </Schedule>
           ))}
         </ul>
       </div>
