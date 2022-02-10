@@ -28,3 +28,27 @@ This repo includes:
 * configuration for server-side debugging in VS Code
 * a single client-side test (`client/components/App.test.js`)
 * ability to use SASS (`client/styles/index.scss`) write all CSS in this file
+
+
+---
+Rough Flow
+* Set up back-end:
+    * Set up database
+    * Run the table and seeds
+    * Implement db functions
+    * Write the routes (and verify that they work in Insomnia)
+
+* Set up front-end:
+    * Consume REST API in the List
+    * Form Components
+    
+* Connect components with routes
+
+
+
+
+STRETCH IDEAS:
+* Use a karaoke api
+* Embed a static video? Make it dynamic.
+* Add a loading icon for when the song list refreshes after a new song request is added
+* Deploy to heroku
