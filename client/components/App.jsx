@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { fetchSchedule } from '../actions'
 
 function App () {
-  const fruits = useSelector(state => state.schedule)
+  const scheduleList = useSelector(state => state.schedule)
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(fetchSchedule())
@@ -15,12 +15,14 @@ function App () {
       <div className='app'>
         <h1>Wombats FTW!</h1>
         <ul>
-          {fruits.map(fruit => (
-            <li key={fruit}>{fruit}</li>
+          {scheduleList.map(schedule => (
+            <li key={schedule}>{schedule}</li>
           ))}
         </ul>
       </div>
-      <div></div>
+      <div>
+        <iframe width="560" height="315" src="https://youtu.be/yqBoguCCG4A" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+      </div>
     </>
   )
 }

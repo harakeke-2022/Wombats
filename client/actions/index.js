@@ -4,7 +4,7 @@ export const SET_SCHEDULE = 'SET_SCHEDULE'
 
 export function setSchedule (schedule) {
   return {
-    type: SET_FRUITS,
+    type: SET_SCHEDULE,
     schedule
   }
 }
