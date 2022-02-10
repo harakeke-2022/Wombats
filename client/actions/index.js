@@ -1,4 +1,4 @@
-import { getSchedule } from '../apis/Schedule'
+import { getSchedule, addPerformer } from '../apis/index'
 
 export const SET_SCHEDULE = 'SET_SCHEDULE'
 
@@ -17,4 +17,16 @@ export function fetchSchedule () {
         return null
       })
   }
+}
+
+export function postPerformer (newPerformer) {
+  return addPerformer(newPerformer)
+    .then(() => {
+      // get a fresh list from the server
+      return getSchedule()
+    })
+    .then(updatedList => {
+    // then update to the global state
+      return null
+    })
 }
