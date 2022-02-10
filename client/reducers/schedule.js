@@ -1,4 +1,4 @@
-import { SET_SCHEDULE } from '../actions'
+import { SET_SCHEDULE } from '../actions/index'
 
 const initialState = []
 

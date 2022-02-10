@@ -13,6 +13,7 @@ export function fetchSchedule () {
   return dispatch => {
     return getSchedule()
       .then(schedule => {
+        console.log(schedule)
         dispatch(setSchedule(schedule))
         return null
       })
@@ -29,4 +30,6 @@ export function postPerformer (newPerformer) {
     // then update to the global state
       return null
     })
+
+    .catch(err => console.error(err))
 }
