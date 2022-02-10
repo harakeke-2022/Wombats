@@ -22,6 +22,8 @@ router.post('/', (req, res) => {
   db.addSchedule({ name, song, url })
     .then(() => { // ignore ids from db function
       res.sendStatus(201)
+    .then(results => {
+      res.json({ schedule: results })
       return null
     })
     .catch(err => {
