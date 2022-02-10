@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
-import { fetchFruits } from '../actions'
+import { fetchSchedule } from '../actions'
 
 function App () {
-  const fruits = useSelector(state => state.fruits)
+  const fruits = useSelector(state => state.schedule)
   const dispatch = useDispatch()
   useEffect(() => {
-    dispatch(fetchFruits())
+    dispatch(fetchSchedule())
   }, [])
 
   return (
@@ -20,6 +20,7 @@ function App () {
           ))}
         </ul>
       </div>
+      <div></div>
     </>
   )
 }
