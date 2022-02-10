@@ -1,4 +1,4 @@
-import { getSchedule } from '../apis/schedule'
+import { getSchedule } from '../apis/Schedule'
 
 export const SET_SCHEDULE = 'SET_SCHEDULE'
 
