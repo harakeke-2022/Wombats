@@ -1,15 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function GetScore () {
-    function scorePerformer() {
-      const score = Math.floor(Math.random() * (100 - 50)) + 50;
-      console.log(score)
-    }
+  const [score, setScore] = useState('')
+
+  function handleClick () {
+    setScore (`Your score is ${(Math.floor(Math.random() * (100 - 50)) + 50)}. Well done, you legend!`)
+  }
+
     return (
     <>
       <div>
-       <button id="randomnumber" onClick={scorePerformer}>Score!</button>
-       <p>Your score is: xx. Well done!</p>
+       <button className="discoBtn" id="randomnumber" onClick={handleClick}>Score!</button>
+       <p>{score}</p>
       </div>
     </>
   )

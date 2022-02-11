@@ -23,7 +23,7 @@ function App () {
           ))}
         </ul>
       </div>
-
+      <GetScore/>
 
     </>
   )
