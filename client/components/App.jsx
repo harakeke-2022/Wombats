@@ -28,9 +28,10 @@ function App () {
               <Schedule key={song.id} song={song}> </Schedule>
             ))}
           </ul>
-         <GetScore/>
+
         </div>
       </div>
+      <GetScore/>
     </>
   )
 }
