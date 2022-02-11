@@ -6,9 +6,8 @@ function Schedule (props) {
     <>
       <section>
         <ul>
-          <li><h2>#{id} {name}</h2></li>
-          <h4>Choice of Song:</h4>
-          <a href={url}>{song}</a>
+          <li><h3>#{id} {name}</h3></li>
+          Click me:<a href={url}>{song}</a>
         </ul>
       </section>
 
