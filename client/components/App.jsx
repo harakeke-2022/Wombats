@@ -14,7 +14,7 @@ function App () {
   return (
     <>
       <div className='app'>
-        <h1>Wombats FTW!</h1>
+        <h1>HARAKEKE-OKE</h1>
         <ul>
           {scheduleList.map(song => (
 
