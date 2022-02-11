@@ -1,20 +1,70 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Press+Start+2P&display=swap');
+
+h1 {
+  font-family: 'Bungee Shade', cursive;
+  font-size: 70px;
+  color: white;
+  text-align: center;
+  margin-bottom: 70px;
+}
 
 html, 
 body {
-  // font-family: 'Montserrat', sans-serif;
-  background-color: rgb(0, 0, 57);
-  max-width: 500px;
+  font-family: 'Press Start 2P', cursive;
+  background-color: rgb(30, 30, 73);
+  max-width: 800px;
   margin: auto;
-  // background: url("./photo-1492684223066-81342ee5ff30.jpeg");
-}
-
-h1 {
-  // font-family: 'Monoton', cursive;
-  font-family: 'Bungee Shade', cursive;
-  font-size: 50px;
+  background-image: url('');
   color: white;
   text-align: center;
+}
+
+
+
+
+//DiscoButton
+$dark:   #15171E;
+$white:  mix($dark, white, 20%);
+$red:    #FD0000;
+$citron: #FDFD00;
+$purple: #A0038B;
+
+.discoBtn {
+  position: relative;
+  display: inline-block;
+  margin: auto;
+  padding: 0.8rem 1.5rem;
+  color: white;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 3px;
+  background-color: #15171E;
+  margin-bottom: 70px;
+  
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 3px solid transparent;
+    transition: border-width 0.25s;
+    border-image: linear-gradient(135deg,$purple, $red, $citron);
+    border-image-slice: 1;
+    pointer-events: none;
+    filter: hue-rotate(0deg);
+    animation: 0.5s linear 0s infinite normal both paused hueShift;
+  }
+  
+  &:hover:before {
+    border-width: 7px;
+    animation-play-state: running;
+  }
+}
+
+@keyframes hueShift {
+  100% { filter: hue-rotate(360deg); }
 }
