@@ -1,6 +1,7 @@
 import { getSchedule, addPerformer } from '../apis/index'
 
 export const SET_SCHEDULE = 'SET_SCHEDULE'
+export const ADD_NEW = 'ADD_NEW'
 
 export function setSchedule (schedule) {
   return {
@@ -10,7 +11,7 @@ export function setSchedule (schedule) {
 }
 
 export function fetchSchedule () {
-  return dispatch => {
+  return (dispatch) => {
     return getSchedule()
       .then(schedule => {
         console.log(schedule)
@@ -21,15 +22,18 @@ export function fetchSchedule () {
 }
 
 export function postPerformer (newPerformer) {
-  return addPerformer(newPerformer)
-    .then(() => {
+  return (dispatch) => {
+    return addPerformer(newPerformer)
+      .then(() => {
       // get a fresh list from the server
-      return getSchedule()
-    })
-    .then(updatedList => {
-    // then update to the global state
-      return null
-    })
+        return getSchedule()
+      })
+      .then(updateList => {
+        // then update to the global state
+        dispatch(setSchedule(updateList))
+        return null
+      })
 
-    .catch(err => console.error(err))
+      .catch(err => console.error(err))
+  }
 }

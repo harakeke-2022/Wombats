@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 
 import { fetchSchedule } from '../actions/index'
 import Schedule from './Schedule'
+import AddPerfomer from './AddPerformer'
 
 function App () {
   const scheduleList = useSelector(state => state.schedule)
@@ -15,6 +16,9 @@ function App () {
     <>
       <div className='app'>
         <h1>HARAKEKE-OKE</h1>
+        <AddPerfomer>
+
+        </AddPerfomer>
         <ul>
           {scheduleList.map(song => (
 
