@@ -55,7 +55,7 @@ function AddPerformer () {
           placeholder='Enter URL'
           className='addNew'
         />
-        <button onClick={handleSubmit}>Ready to Sing!</button>
+        <button className="discoBtn" onClick={handleSubmit}>Add my song!</button>
       </form>
     </>)
 }
