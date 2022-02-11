@@ -13,17 +13,24 @@ function App () {
 
   return (
     <>
-      <div className='app'>
-        <h1>HARAKEKE-OKE</h1>
-        <div><button a href="#" class="discoBtn">Add my song!</button></div>
-        <ul>
-          {scheduleList.map(song => (
-            <Schedule key={song.id} song={song}> </Schedule>
-          ))}
-        </ul>
+      {/* <div className="wrapper">
+        <div className='box'><span className='dot'></span></div>
+        <div className='box'><span className='dot'></span></div>
+      </div> */}
+      <h1>HARAKEKE-OKE</h1>
+      <div className="flex-container">
+        <div>
+          <button a href="#" className="discoBtn">Add my song!</button>
+        </div>
+        <div className="waitlist">
+          <ul>
+            <h2>WAITLIST</h2>
+            {scheduleList.map(song => (
+              <Schedule key={song.id} song={song}> </Schedule>
+            ))}
+          </ul>
+        </div>
       </div>
-
-
     </>
   )
 }
