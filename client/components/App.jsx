@@ -17,9 +17,8 @@ function App () {
       <h1>HARAKEKE-OKE</h1>
       <div className="flex-container">
         <div>
-            <AddPerfomer>
-            </AddPerfomer>
-          <button a href="#" className="discoBtn">Add my song!</button>
+          <AddPerfomer>
+          </AddPerfomer>
         </div>
         <div className="waitlist">
           <ul>
