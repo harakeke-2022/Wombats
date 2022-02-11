@@ -10,6 +10,7 @@ function GetScore () {
     return (
     <>
       <div>
+       <button className="discoBtn" onClick={console.log(`This does nothing!`)}>Listening...</button>
        <button className="discoBtn" id="randomnumber" onClick={handleClick}>Score!</button>
        <p>{score}</p>
       </div>
