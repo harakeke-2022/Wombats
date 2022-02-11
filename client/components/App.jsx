@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 
 import { fetchSchedule } from '../actions/index'
 import Schedule from './Schedule'
+import AddPerfomer from './AddPerformer'
 
 function App () {
   const scheduleList = useSelector(state => state.schedule)
@@ -13,13 +14,11 @@ function App () {
 
   return (
     <>
-      {/* <div className="wrapper">
-        <div className='box'><span className='dot'></span></div>
-        <div className='box'><span className='dot'></span></div>
-      </div> */}
       <h1>HARAKEKE-OKE</h1>
       <div className="flex-container">
         <div>
+            <AddPerfomer>
+            </AddPerfomer>
           <button a href="#" className="discoBtn">Add my song!</button>
         </div>
         <div className="waitlist">
@@ -30,6 +29,7 @@ function App () {
             ))}
           </ul>
         </div>
+
       </div>
     </>
   )

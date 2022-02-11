@@ -10,8 +10,8 @@ export function getSchedule () {
     })
 }
 
-export function addPerformer (name, song, url) {
+export function addPerformer (performer) {
   return request
-    .post(rootUrl)
-    .send({ name: name, song: song, url: url })
+    .post(rootUrl + '/schedule')
+    .send(performer)
 }
