@@ -15,16 +15,15 @@ function App () {
     <>
       <div className='app'>
         <h1>HARAKEKE-OKE</h1>
+        <div><button a href="#" class="discoBtn">Add my song!</button></div>
         <ul>
           {scheduleList.map(song => (
-
             <Schedule key={song.id} song={song}> </Schedule>
           ))}
         </ul>
       </div>
-      <div>
-        <iframe width="560" height="315" src="https://youtu.be/yqBoguCCG4A" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-      </div>
+
+
     </>
   )
 }
