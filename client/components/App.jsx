@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 
 import { fetchSchedule } from '../actions/index'
 import Schedule from './Schedule'
+import GetScore from './GetScore'
 import AddPerfomer from './AddPerformer'
 
 function App () {
@@ -27,8 +28,8 @@ function App () {
               <Schedule key={song.id} song={song}> </Schedule>
             ))}
           </ul>
+         <GetScore/>
         </div>
-
       </div>
     </>
   )
