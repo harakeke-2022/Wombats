@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 
 import { fetchSchedule } from '../actions/index'
 import Schedule from './Schedule'
+import GetScore from './GetScore'
 
 function App () {
   const scheduleList = useSelector(state => state.schedule)
@@ -23,8 +24,9 @@ function App () {
         </ul>
       </div>
       <div>
-        <iframe width="560" height="315" src="https://youtu.be/yqBoguCCG4A" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/cG12YDKjpos" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
+      <GetScore/>
     </>
   )
 }
