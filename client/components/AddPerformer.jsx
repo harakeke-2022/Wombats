@@ -28,7 +28,7 @@ function AddPerformer () {
 
   return (
     <>
-      <form >
+      <form className='form'>
         <input
           type="text"
           value={input.name}
