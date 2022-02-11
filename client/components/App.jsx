@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
-import { fetchSchedule } from '../actions'
+import { fetchSchedule } from '../actions/index'
 import Schedule from './Schedule'
 
 function App () {
